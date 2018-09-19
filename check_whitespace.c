@@ -19,7 +19,7 @@ char* strip(char* str) {
   num_spaces = 0;
   first_non_space = 0;
   while (first_non_space<size && str[first_non_space] == ' ') {
-    ++num_spaces;
+https://github.com/UMM-CSci-3403-Fall-2018/pre-lab-on-c-and-memory-management-welch298.git    ++num_spaces;
     ++first_non_space;
   }
 
@@ -66,7 +66,10 @@ int is_clean(char* str) {
   // 0 if they're equal, and a positive value if the first is
   // greater than the second.
   result = strcmp(str, cleaned);
-
+   
+  if(strlen(cleaned)!=0){
+  free(cleaned);
+  }
   return result == 0;
 }
 
